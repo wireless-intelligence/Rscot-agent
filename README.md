@@ -37,12 +37,6 @@ Plus full-stack work: API endpoints, test suites, refactors, debugging, devops s
 
 ---
 
-- **Frontend**: TypeScript + Preact (VSCode) / React + Tauri (desktop)
-- **Backend**: Python 3.11 + FastAPI + httpx
-- **LLM transport**: streaming SSE, retry-with-backoff, three-source web search
-- **Storage**: local JSON sessions in `.cwa/conversations/`, no database required
-
----
 
 ## Links
 
