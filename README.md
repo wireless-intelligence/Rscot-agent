@@ -66,23 +66,6 @@ Set your LLM key once via the desktop app's `🔑` button or `Code Workspace: Se
 
 ---
 
-## Architecture
-
-```
-┌────────────────────────────────────────────────────────────┐
-│  Clients          Desktop (Tauri)   VSCode ext   CLI       │
-│                          │              │         │        │
-│                          └──────┬───────┴─────────┘        │
-│                                 ▼                          │
-│                      FastAPI backend  :8010                │
-│                                 │                          │
-│           ┌─────────────────────┼─────────────────────┐    │
-│           ▼                     ▼                     ▼    │
-│      Tool runtime        Provider adapter      Knowledge   │
-│   (write_file / shell)  (5 providers, 1 API)    (17 stacks)│
-└────────────────────────────────────────────────────────────┘
-```
-
 - **Frontend**: TypeScript + Preact (VSCode) / React + Tauri (desktop)
 - **Backend**: Python 3.11 + FastAPI + httpx
 - **LLM transport**: streaming SSE, retry-with-backoff, three-source web search
