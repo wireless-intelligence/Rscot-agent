@@ -20,20 +20,6 @@ All three share the same backend, same tools, same provider routing.
 
 ---
 
-## Features
-
-- **5 LLM providers, one interface** — DeepSeek · OpenAI · Anthropic · OpenRouter · Ollama. Per-provider API key storage in OS keychain. Anthropic uses native `/v1/messages` translator; the rest are OpenAI-compatible.
-- **Fine-grained permissions** — 5 tool categories × 3 policies (auto / ask / deny). File reads default auto; shell commands and writes default ask; you can lock down or open up per workspace.
-- **Cross-session memory** — last week's fix auto-recalled this week in the same workspace.
-- **Real web search** — three-way fan-out: You.com → Brave → Wikipedia. Falls back gracefully when any source errors.
-- **Knowledge layer** — 17 stack templates (FastAPI / Next.js / Flutter / PyTorch / Rust CLI / …) auto-inject conventions so the agent ships idiomatic code.
-- **Session management** — saved conversations with rename / delete / fork / pin / archive / search / Markdown+JSON export.
-- **Living UI (desktop edition)** — Memory Bank visualization, Digital Twin orb, streaming particles, tool execution rings, activity heartbeat sparklines. Light + dark themes auto-switch.
-- **Git checkpoint** — every session is a non-destructive checkpoint; `done` produces a whitelist-based commit that never touches files the agent didn't write.
-- **Local everything** — code, memory database, stack snapshots all stay on your machine. Only the prompt body goes to the LLM API you chose.
-
----
-
 ## What it can build
 
 `41` self-contained HTML demos are live at **<https://learningfind.com/>** — every one was produced by Rscot-agent in a single session. Categories:
@@ -113,8 +99,20 @@ Set your LLM key once via the desktop app's `🔑` button or `Code Workspace: Se
 
 ## License
 
-Open source. Free for personal use.
+Rscot-agent is released under a dual-license model.
 
----
+Community License
 
-> Rscot-agent — your codebase, your terminal, your agent. Local-first. Provider-agnostic.
+The open-source community version is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+
+You may use, study, modify, and redistribute Rscot-agent under the terms of the AGPL-3.0. If you modify Rscot-agent and make it available as a network service or hosted product, you must make the corresponding source code available under the same license.
+
+Commercial License
+
+A commercial license is available for individuals, teams, and companies that want to use Rscot-agent in proprietary, closed-source, enterprise, SaaS, consulting, or commercial products without the obligations of the AGPL-3.0.
+
+For commercial licensing, please contact us
+
+Trademark Notice
+
+“Rscot-agent” and “Recot Code Agent” are project names of the original author. The license does not grant permission to use these names, logos, or branding to imply endorsement or official affiliation.
